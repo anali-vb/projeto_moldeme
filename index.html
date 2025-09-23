@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Medidas</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="shortcut icon" href="./imagens/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header class="container">
+        <img src="imagens/Logo-colorida-horizontal-1.png" alt="logo-molde.me">
+        <h1>Cadastro de Medidas</h1>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Formulário</h2>
+            <form id="form-medida" autocomplete="on">
+                <div class="grid">
+                    <div class="field">
+                        <label for="nome">Nome da medida: </label>
+                        <input id="nome" name="nome" type="text" placeholder="Ex: Cintura" maxlength="40" minlength="5" required>
+                    </div>
+                </br>
+                    <div class="field">
+                        <label for="valor">Valor da medida: </label>
+                        <input id="valor" name="valor" type="number" inputmode="decimal" step="0.01" min="0" placeholder="Número" required>
+                    </div>
+                </br>
+                    <div class="field">
+                        <label for="unidade">Unidade: </label>
+                        <select id="unidade" name="unidade" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="m">m</option>
+                            <option value="cm">cm</option>
+                            <option value="mm">mm</option>
+                            <option value="pol">pol</option>
+                        </select>
+                    </div>
+                </div>
+            </br>
+                <button id="btn-adicionar" type="submit">Adicionar medida</button>
+
+            </form>
+        </section>
+        
+        <section class="card">
+            <h2>Medidas Cadastradas</h2>
+            <div class="table-wrapper">
+                <table aria-describedby="status-tabela">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Unidade</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-medidas"></tbody>
+                </table>
+                <p id="status-tabela" class="muted" aria-live="polite">
+                    Nenhuma medida adicionada ainda.
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/model.js" defer></script>
+    <script src="scripts/repository.js" defer></script>
+    <script src="scripts/view.js" defer></script>
+    <script src="scripts/controller.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+
+</body>
+</html>
