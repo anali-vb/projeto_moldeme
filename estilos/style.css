@@ -221,7 +221,9 @@ tbody td {
 }
 
 tbody td:nth-child(1) {
-  white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: normal;  
+    word-break: keep-all; 
 }
 
 tbody tr:nth-child(even) {
@@ -334,7 +336,11 @@ tbody tr:nth-child(even) {
     thead th {
         white-space: nowrap;
         word-break: keep-all;
-  }
+    }
+
+    tbody td:nth-child(1) { 
+        overflow-wrap: anywhere; 
+    } 
 
     .full { 
         display: none; 
