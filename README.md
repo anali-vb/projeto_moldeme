@@ -24,4 +24,6 @@ App web simples (HTML/CSS/JS puro) para cadastrar, listar e remover medidas.
 - Os dados são mantidos **em memória** (não persistem após recarregar).
 - Projeto desenvolvido no **VS Code**.
 
+---
+
 Feito com carinho. Boa codificação e medidas sempre no ponto! ✂️✨
