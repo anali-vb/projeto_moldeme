@@ -238,6 +238,7 @@ tbody tr:nth-child(even) {
     min-width: 36px;
     height: 36;
     line-height: 1;
+    white-space: nowrap;
 }
 
 .btn-remover:hover {
