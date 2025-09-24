@@ -3,14 +3,14 @@
 
   class MedidaController {
     /**
-     * @param {object} dependencies
-     * @param {MedidaRepository} dependencies.repo
-     * @param {MedidaView} dependencies.view
-     * @param {HTMLFormElement} dependencies.form
-     * @param {HTMLInputElement} dependencies.inputNome
-     * @param {HTMLInputElement} dependencies.inputValor
-     * @param {HTMLSelectElement} dependencies.selectUnidade
-     */
+    * @param {object} dependencies
+    * @param {MedidaRepository} dependencies.repo
+    * @param {MedidaView} dependencies.view
+    * @param {HTMLFormElement} dependencies.form
+    * @param {HTMLInputElement} dependencies.inputNome
+    * @param {HTMLInputElement} dependencies.inputValor
+    * @param {HTMLSelectElement} dependencies.selectUnidade
+    */
 
     constructor({repo, view, form, inputNome, inputValor, selectUnidade}) {
       if (!repo || !view || !form || !inputNome || !inputValor || !selectUnidade) {
@@ -46,7 +46,6 @@
           valor: this.inputValor.value,
           unidade: this.selectUnidade.value,
         });
-
         this.repo.add(medida);
         this.form.reset();
         this.inputNome.focus();

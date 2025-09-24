@@ -3,10 +3,10 @@
 
   class MedidaView {
     /**
-     * @param {object} elements
-     * @param {HTMLElement} elements.tbody       
-     * @param {HTMLElement} [elements.statusElement] 
-     */
+    * @param {object} elements
+    * @param {HTMLElement} elements.tbody       
+    * @param {HTMLElement} [elements.statusElement] 
+    */
 
     constructor({tbody, statusElement}) {
       if (!tbody) throw new Error('MedidaView: tbody é obrigatório.');
