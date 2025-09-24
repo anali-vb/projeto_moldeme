@@ -264,14 +264,14 @@ tbody tr:nth-child(even) {
 
 /* Esconder visualmente (acessibilidade) */
 .sr-only{
-    position: absolute !important;  /* tira do fluxo visual */
+    position: absolute !important;  
     width: 1px; 
     height: 1px;        
     padding: 0; 
     margin: -1px;       
     overflow: hidden;               
-    clip: rect(0,0,0,0);            /* recorta tudo */
-    white-space: nowrap;            /* evita quebra de linha */
+    clip: rect(0,0,0,0);           
+    white-space: nowrap;           
     border: 0;
 }
 
@@ -318,8 +318,8 @@ tbody tr:nth-child(even) {
     }
 
     thead th {
-    white-space: nowrap;
-    word-break: keep-all;
+        white-space: nowrap;
+        word-break: keep-all;
   }
 
     thead th:nth-child(3) {         
@@ -356,8 +356,8 @@ tbody tr:nth-child(even) {
 
     .btn-remover::after {
         content: "×";
-        font-size: 18px;              /* ícone visível */
+        font-size: 18px;              
         display: inline-block;
-        transform: translateY(-1px);  /* micro alinhamento opcional */
+        transform: translateY(-1px); 
     }
 }
