@@ -1,4 +1,4 @@
-
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 
@@ -31,7 +31,6 @@
   /* Largura do container */
   --container: 1080px;
 }
-
 
 *,
 *::before,
@@ -67,7 +66,6 @@ img {
   outline: 3px solid var(--amarelo-acento);
   outline-offset: 2px;
 }
-
 
 .container {
   max-width: var(--container);
@@ -118,25 +116,58 @@ header.container h1 {
   text-align: left;
 }
 
+#form-medida { 
+    display: grid; 
+    gap: var(--space-4);
+    justify-items: start; 
+}
+
+#form-medida .grid { 
+    width: 100%; 
+}
 
 /* Desktop */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-4);
+  align-items: end;
 }
 
 /* Tablet */
 @media (max-width: 768px) {
-  .grid { 
-    grid-template-columns: repeat(2, 1fr); 
+    .grid { 
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
     }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
-  .grid { 
-    grid-template-columns: 1fr; 
+    .grid { 
+        grid-template-columns: 1fr; 
+    }
+
+    .card > h2 { 
+        text-align: center;
+    }
+
+    thead th, tbody td { 
+        padding: 8px; 
+    }
+
+    .btn-remover { 
+        padding: 6px 10px; 
+        font-size: .9rem; 
+        white-space: nowrap; 
+    }
+
+    #form-medida { 
+        justify-items: center; 
+    }
+
+    #btn-adicionar {
+        width: min(320px, 100%);              
+        justify-self: center;
     }
 }
 
@@ -172,10 +203,14 @@ header.container h1 {
   border-radius: var(--radius);
   background: var(--roxo-principal);
   color: #fff;
-  padding: 12px 16px;
+  padding: 14px 20px;
   font-weight: 600;
+  min-height: 44px;
   cursor: pointer;
   transition: background .15s ease, box-shadow .15s ease, transform .03s ease;
+  width: auto;
+  inline-size: fit-content;
+
 }
 
 #btn-adicionar:hover, button[type="submit"]:hover, button.btn-primary:hover {
@@ -191,7 +226,7 @@ header.container h1 {
   cursor: not-allowed;
 }
 
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
   thead th, tbody td { 
     padding: 8px; 
     }
@@ -201,15 +236,15 @@ header.container h1 {
     font-size: .9rem; 
     white-space: nowrap; 
     }
-}
+}*/
 
 .table-wrapper {
-  width: 100%;
-  border: 1px solid var(--superficie);
-  border-radius: var(--radius);
-  background: #fff;
-  padding-bottom: var(--espace-3);
-  margin-bottom: var(--space-2);
+    width: 100%;
+    border: 1px solid var(--superficie);
+    border-radius: var(--radius);
+    background: #fff;
+    padding-bottom: var(--espace-3);
+    margin-bottom: var(--space-2);
 }
 
 table {
@@ -260,6 +295,7 @@ tbody td:nth-child(1), tbody td:nth-child(2), tbody td:nth-child(3), tbody td:nt
   cursor: pointer;
   font-weight: 500;
   transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+  white-space: nowrap;
 }
 
 .btn-remover:hover {
