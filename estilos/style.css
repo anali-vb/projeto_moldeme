@@ -229,11 +229,17 @@ tbody tr:nth-child(even) {
     border: 1px solid var(--roxo-principal);
     background: transparent;
     color: var(--roxo-principal);
-    padding: 8px 12px;
+    /*padding: 8px 12px;*/
     border-radius: var(--radius);
     cursor: pointer;
     font-weight: 500;
     transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+    /**/
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 0;
+    line-height: 1;
 }
 
 .btn-remover:hover {
@@ -244,6 +250,10 @@ tbody tr:nth-child(even) {
     box-shadow: 0 0 0 3px var(--amarelo-acento);
 }
 
+.btn-remover span { 
+    pointer-events: none; 
+}
+
 /* Status tabela */
 .table-wrapper > #status-tabela {
     margin-top: 0px;
@@ -252,7 +262,7 @@ tbody tr:nth-child(even) {
     color: var(--muted);
     font-size: 0.925rem;
     display: flex;
-    align-items: center;
+    align-items: center;  
 }
 
 /* Utilitários */
