@@ -275,6 +275,14 @@ tbody tr:nth-child(even) {
     border: 0;
 }
 
+/* Padrão desktop: mostra textos completos, esconde abreviações */
+.full { 
+    display: inline; 
+}
+
+.short { 
+    display: none; }
+
 /* Media queries */
 /* Tablet */
 @media (max-width: 768px) {
@@ -309,9 +317,17 @@ tbody tr:nth-child(even) {
         padding: 8px; 
     }
 
+    .full { 
+        display: none; 
+    }
+
+    .short { 
+        display: inline; 
+    }
+    
     .btn-remover { 
-        padding: 6px 10px; 
-        font-size: .9rem; 
-        white-space: nowrap; 
+        padding: 8px 10px;
+        min-width: 36px;
+        line-height: 1;
     }
 }

@@ -29,7 +29,10 @@
           <td>${this._formatNumber(m.valor)}</td>
           <td>${this._esc(m.unidade)}</td>
           <td>
-            <button type="button" class="btn-remover" data-id="${m.id}">Remover</button>
+            <button type="button" class="btn-remover" data-id="${m.id} aria-label="Remover"">
+              <span class="full">Remover</span>
+              <span class="short" aria-hidden="true">×</span>
+            </button>
           </td>
         `;
         this.tbody.appendChild(tr);
