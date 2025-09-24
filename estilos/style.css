@@ -317,6 +317,29 @@ tbody tr:nth-child(even) {
         padding: 8px; 
     }
 
+    thead th {
+    white-space: nowrap;
+    word-break: keep-all;
+  }
+
+    thead th:nth-child(3) {         
+        font-size: 0;                 
+        position: relative;
+    }
+    thead th:nth-child(3)::after {
+        content: "Un";
+        font-size: 14px;              
+    }
+
+    thead th:nth-child(4) {         
+        font-size: 0;
+        position: relative;
+    }
+    thead th:nth-child(4)::after {
+        content: "Ação";
+        font-size: 14px;
+    }
+
     .full { 
         display: none; 
     }
@@ -329,5 +352,12 @@ tbody tr:nth-child(even) {
         padding: 8px 10px;
         min-width: 36px;
         line-height: 1;
+    }
+
+    .btn-remover::after {
+        content: "×";
+        font-size: 18px;              /* ícone visível */
+        display: inline-block;
+        transform: translateY(-1px);  /* micro alinhamento opcional */
     }
 }
