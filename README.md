@@ -6,7 +6,7 @@ App web simples (HTML/CSS/JS puro) para cadastrar, listar e remover medidas.
 
 ### 1) Online (GitHub Pages)
 - Acesse o **link do site** que já aparece na página do repositório (seção **About → Website**)  
-  ou use: **https://SEU-USUARIO.github.io/SEU-REPO/** <!-- atualize se quiser -->
+  ou use: **https://anali-vb.github.io/projeto_moldeme/** 
 
 ### 2) Local (sem dependências)
 - No GitHub, clique em **Code → Download ZIP** e extraia, ou `git clone`.
@@ -23,3 +23,5 @@ App web simples (HTML/CSS/JS puro) para cadastrar, listar e remover medidas.
 ## Observações
 - Os dados são mantidos **em memória** (não persistem após recarregar).
 - Projeto desenvolvido no **VS Code**.
+
+Feito com carinho. Boa codificação e medidas sempre no ponto! ✂️✨
