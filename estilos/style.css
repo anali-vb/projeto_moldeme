@@ -355,7 +355,7 @@ tbody tr:nth-child(even) {
     }
 
     .btn-remover::after {
-        content: "×";
+        content: "x";
         font-size: 18px;              
         display: inline-block;
         transform: translateY(-1px); 

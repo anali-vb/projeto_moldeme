@@ -31,7 +31,7 @@
           <td>
             <button type="button" class="btn-remover" data-id="${m.id}" aria-label="Remover">
               <span class="full">Remover</span>
-              <span class="short" aria-hidden="true">×</span>
+              <span class="short" aria-hidden="true">x</span>
             </button>
           </td>
         `;
