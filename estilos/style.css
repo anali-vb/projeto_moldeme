@@ -50,6 +50,8 @@ body {
     line-height: 1.5;
     color: var(--texto);
     background: var(--fundo);
+    display: flex; 
+    flex-direction: column;
 }
 
 /* Tipografia base */
@@ -71,6 +73,10 @@ img {
 }
 
 /* Layout*/
+main.container { 
+    flex: 1; 
+} 
+
 .container {
     max-width: var(--container);
     margin-inline: auto;
@@ -243,7 +249,7 @@ tbody tr:nth-child(even) {
     transition: background .15s ease, color .15s ease, box-shadow .15s ease;
     justify-content: center;
     min-width: 36px;
-    height: 36;
+    height: 36px;
     line-height: 1;
     white-space: nowrap;
 }
@@ -269,6 +275,13 @@ tbody tr:nth-child(even) {
     font-size: 0.925rem;
     display: flex;
     align-items: center;  
+} 
+
+/* Rodapé */
+.site-footer { 
+  border-top: 1px solid var(--superficie);
+  padding: var(--space-1);
+  text-align: center;
 }
 
 /* Utilitários */
