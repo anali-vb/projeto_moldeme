@@ -52,28 +52,42 @@ body {
     background: var(--fundo);
 }
 
+/* Tipografia base */
 h1, h2, h3, p { 
     margin: 0 0 var(--space-4); 
 }
 
+/* Mídia base */
 img { 
     max-width: 100%; 
     height: auto; 
     display: block; 
 }
 
-/* Foco acessível */
+/* Foco acessível global */
 :where(a, button, input, select, textarea):focus-visible {
     outline: 3px solid var(--amarelo-acento);
     outline-offset: 2px;
 }
 
+/* Layout*/
 .container {
     max-width: var(--container);
     margin-inline: auto;
     padding-inline: var(--space-4);
 }
 
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+}
+
+form .grid { 
+    margin-bottom: var(--space-4); 
+}
+
+/* Componentes */
 header.container {
     display: flex;
     flex-direction: column;
@@ -93,6 +107,7 @@ header.container h1 {
     color: var(--roxo-hover);
 }
 
+/* Card */
 .card {
     background: #fff;
     border: 1px solid var(--superficie);
@@ -117,12 +132,7 @@ header.container h1 {
     text-align: left;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-4);
-}
-
+/* Campos */
 .field label {
     display: block;
     margin-bottom: 6px;
@@ -130,6 +140,7 @@ header.container h1 {
     color: var(--muted);
 }
 
+/* Inputs/select com baixa especificidade */
 :where(input[type="text"], input[type="number"], select) {
     width: 100%;
     padding: 10px 12px;
@@ -149,6 +160,7 @@ header.container h1 {
     box-shadow: 0 0 0 3px var(--anel-acento);
 }
 
+/* Botões principais */
 #btn-adicionar, button[type="submit"], button.btn-primary {
     appearance: none;
     border: none;
@@ -174,6 +186,7 @@ header.container h1 {
     cursor: not-allowed;
 }
 
+/* Tabela */
 .table-wrapper {
     width: 100%;
     border: 1px solid var(--superficie);
@@ -188,7 +201,7 @@ table {
 }
 
 thead th {
-    text-align: left;
+    text-align: center;
     font-weight: 600;
     padding: 12px;
     background: var(--superficie);
@@ -197,11 +210,6 @@ thead th {
     top: 0;
     z-index: 1;
     word-break: break-word;
-    text-align: center;
-}
-
-thead th:nth-child(1), thead th:nth-child(2), thead th:nth-child(3), thead th:nth-child(4) { 
-    text-align: center; 
 }
 
 tbody td {
@@ -215,10 +223,7 @@ tbody tr:nth-child(even) {
     background: #faf9fb;
 }
 
-tbody td:nth-child(1), tbody td:nth-child(2), tbody td:nth-child(3), tbody td:nth-child(4) {   
-    text-align: center; 
-}
-
+/* Botão secundário */
 .btn-remover {
     appearance: none;
     border: 1px solid var(--roxo-principal);
@@ -239,6 +244,7 @@ tbody td:nth-child(1), tbody td:nth-child(2), tbody td:nth-child(3), tbody td:nt
     box-shadow: 0 0 0 3px var(--amarelo-acento);
 }
 
+/* Status tabela */
 .table-wrapper > #status-tabela {
     margin-top: 0px;
     padding: var(--space-4) 12px 0; 
@@ -249,6 +255,7 @@ tbody td:nth-child(1), tbody td:nth-child(2), tbody td:nth-child(3), tbody td:nt
     align-items: center;
 }
 
+/* Utilitários */
 .muted { 
     color: var(--muted); 
     font-size: 0.925rem; 
@@ -268,6 +275,7 @@ tbody td:nth-child(1), tbody td:nth-child(2), tbody td:nth-child(3), tbody td:nt
     border: 0;
 }
 
+/* Media queries */
 /* Tablet */
 @media (max-width: 768px) {
     .grid { 
@@ -279,6 +287,22 @@ tbody td:nth-child(1), tbody td:nth-child(2), tbody td:nth-child(3), tbody td:nt
 @media (max-width: 480px) {
     .grid { 
         grid-template-columns: 1fr; 
+    }
+
+    .card > h2 { 
+        text-align: center !important; 
+    }
+
+    #btn-adicionar, button[type="submit"], button.btn-primary {
+        display: block !important;
+        width: 100% !important;             
+        margin: var(--space-4) auto 0;
+        text-align: center !important; 
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     thead th, tbody td { 
