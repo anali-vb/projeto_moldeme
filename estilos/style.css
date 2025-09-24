@@ -126,49 +126,11 @@ header.container h1 {
     width: 100%; 
 }
 
-/* Desktop */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-4);
   align-items: end;
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-    .grid { 
-        grid-template-columns: repeat(2, minmax(0, 1fr)); 
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    .grid { 
-        grid-template-columns: 1fr; 
-    }
-
-    .card > h2 { 
-        text-align: center;
-    }
-
-    thead th, tbody td { 
-        padding: 8px; 
-    }
-
-    .btn-remover { 
-        padding: 6px 10px; 
-        font-size: .9rem; 
-        white-space: nowrap; 
-    }
-
-    #form-medida { 
-        justify-items: center; 
-    }
-
-    #btn-adicionar {
-        width: min(320px, 100%);              
-        justify-self: center;
-    }
 }
 
 .campo label {
@@ -226,24 +188,12 @@ header.container h1 {
   cursor: not-allowed;
 }
 
-/*@media (max-width: 480px) {
-  thead th, tbody td { 
-    padding: 8px; 
-    }
-
-  .btn-remover { 
-    padding: 6px 10px; 
-    font-size: .9rem; 
-    white-space: nowrap; 
-    }
-}*/
-
 .table-wrapper {
     width: 100%;
     border: 1px solid var(--superficie);
     border-radius: var(--radius);
     background: #fff;
-    padding-bottom: var(--espace-3);
+    padding-bottom: var(--space-3);
     margin-bottom: var(--space-2);
 }
 
@@ -320,6 +270,43 @@ tbody td:nth-child(1), tbody td:nth-child(2), tbody td:nth-child(3), tbody td:nt
     color: var(--muted); 
     font-size: 0.925rem; 
     margin-top: var(--space-3); 
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .grid { 
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .grid { 
+        grid-template-columns: 1fr; 
+    }
+
+    .card > h2 { 
+        text-align: center;
+    }
+
+    thead th, tbody td { 
+        padding: 8px; 
+    }
+
+    .btn-remover { 
+        padding: 6px 10px; 
+        font-size: .9rem; 
+        white-space: nowrap; 
+    }
+
+    #form-medida { 
+        justify-items: center; 
+    }
+
+    #btn-adicionar {
+        width: min(320px, 100%);              
+        justify-self: center;
+    }
 }
 
 /* Esconder visualmente (acessibilidade) */
