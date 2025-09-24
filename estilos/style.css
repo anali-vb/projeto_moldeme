@@ -338,9 +338,7 @@ tbody tr:nth-child(even) {
         word-break: keep-all;
     }
 
-    tbody td:nth-child(1) { 
-        overflow-wrap: anywhere; 
-    } 
+
 
     .full { 
         display: none; 
