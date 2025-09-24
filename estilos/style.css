@@ -209,14 +209,18 @@ thead th {
     position: sticky; 
     top: 0;
     z-index: 1;
-
+    word-break: normal;
 }
 
 tbody td {
     padding: 12px;
     border-top: 1px solid var(--superficie);
-
+    word-break: normal;
     text-align: center;
+}
+
+tbody td:nth-child(1) {
+  white-space: nowrap;
 }
 
 tbody tr:nth-child(even) {
