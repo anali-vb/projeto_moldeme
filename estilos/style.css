@@ -209,13 +209,13 @@ thead th {
     position: sticky; 
     top: 0;
     z-index: 1;
-    word-break: break-word;
+
 }
 
 tbody td {
     padding: 12px;
     border-top: 1px solid var(--superficie);
-    word-break: break-word;
+
     text-align: center;
 }
 
