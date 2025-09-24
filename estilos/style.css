@@ -338,8 +338,6 @@ tbody tr:nth-child(even) {
         word-break: keep-all;
     }
 
-
-
     .full { 
         display: none; 
     }
