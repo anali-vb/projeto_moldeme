@@ -5,8 +5,7 @@ App web simples (HTML/CSS/JS puro) para cadastrar, listar e remover medidas.
 ## Como executar
 
 ### 1) Online (GitHub Pages)
-- Acesse o **link do site** que aparece na página do repositório (seção **About → Website**).
-- O padrão do link é: `https://anali-vb.github.io/projeto_moldeme/`.
+- [https://anali-vb.github.io/projeto_moldeme/](https://anali-vb.github.io/projeto_moldeme/)
 
 ### 2) Local (sem dependências)
 - No GitHub, clique em **Code → Download ZIP** e extraia, ou use `git clone`.
@@ -21,9 +20,13 @@ App web simples (HTML/CSS/JS puro) para cadastrar, listar e remover medidas.
 - Responsivo e com foco acessível.
 
 ## Observações
-- Os dados são mantidos **em memória** (não persistem após recarregar).
-- Projeto desenvolvido no **VS Code**.
-- Inclui também um arquivo `tests.html` com testes automatizados (QUnit) para validar regras do modelo `Medida` e do `MedidaRepository`. Para executá-los, basta abrir o arquivo `tests.html` em um navegador moderno.
+- Os dados são mantidos **em memória** (não persistem após recarregar).  
+- Projeto desenvolvido no **VS Code**.  
+- O projeto inclui também testes automatizados com **QUnit**, no arquivo `tests.html`, que validam as regras do modelo `Medida` e do `MedidaRepository`.  
+
+### Como executar os testes
+- Abrir o arquivo `tests.html` localmente em um navegador moderno, ou  
+- [https://anali-vb.github.io/projeto_moldeme/tests.html](https://anali-vb.github.io/projeto_moldeme/tests.html)  
 
 ---
 
