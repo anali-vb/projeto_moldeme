@@ -89,7 +89,7 @@ main.container {
     gap: var(--space-4);
 }
 
-form .grid { 
+#form-medida .grid { 
     margin-bottom: var(--space-4); 
 }
 
