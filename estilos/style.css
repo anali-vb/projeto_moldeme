@@ -55,7 +55,7 @@ body {
 }
 
 /* Tipografia base */
-h1, h2, h3, p { 
+h1, h2, p { 
     margin: 0 0 var(--space-4); 
 }
 
