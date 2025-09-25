@@ -27,4 +27,4 @@ App web simples (HTML/CSS/JS puro) para cadastrar, listar e remover medidas.
 
 ---
 
-Feito com carinho. Boa codificação e medidas sempre no ponto! ✂️✨
+Feito com carinho. Bons testes e boa experiência! ✨
