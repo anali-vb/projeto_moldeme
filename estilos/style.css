@@ -83,7 +83,7 @@ main.container {
     padding-inline: var(--space-4);
 }
 
-.grid{
+.grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-4);
