@@ -23,7 +23,7 @@ App web simples (HTML/CSS/JS puro) para cadastrar, listar e remover medidas.
 ## Observações
 - Os dados são mantidos **em memória** (não persistem após recarregar).
 - Projeto desenvolvido no **VS Code**.
-- Inclui também um arquivo **`tests.html`** com testes automatizados (QUnit) para validar regras do modelo `Medida` e do `MedidaRepository`.
+- Inclui também um arquivo `tests.html` com testes automatizados (QUnit) para validar regras do modelo `Medida` e do `MedidaRepository`. Para executá-los, basta abrir o arquivo `tests.html` em um navegador moderno.
 
 ---
 
