@@ -1,7 +1,7 @@
-QUnit.module("Classe Medida", () => {
-    QUnit.test("cria medida válida", assert => {
+QUnit.module("Classe Medida", () => { // agrupar testes relacionados
+    QUnit.test("cria medida válida", assert => { // Testar a classe Medida
         const m = new Medida({nome: "Cintura", valor: 80, unidade: "cm"});
-        assert.equal(m.nome, "Cintura");
+        assert.equal(m.nome, "Cintura"); // verificar se os atributos foram salvos do jeito esperado
         assert.equal(m.valor, 80);
         assert.equal(m.unidade, "cm");
     });
@@ -23,20 +23,20 @@ QUnit.module("Classe Medida", () => {
 });
 
 QUnit.module("MedidaRepository", () => {
-    QUnit.test("adiciona e lista medida", assert => {
-        const repo = new MedidaRepository();
+    QUnit.test("adiciona e lista medida", assert => { // Testar o MedidaRepository
+        const repo = new MedidaRepository(); // Cria um repositório vazio
         const m = new Medida({nome: "Torso", valor: 95, unidade: "cm"});
         repo.add(m);
 
         const lista = repo.list();
-        assert.equal(lista.length, 1);
-        assert.equal(lista[0].nome, "Torso");
+        assert.equal(lista.length, 1); // A lista tem 1 item
+        assert.equal(lista[0].nome, "Torso"); // Esse item tem o nome esperado
     });
 
     QUnit.test("remove medida pelo id", assert => {
         const repo = new MedidaRepository();
         const m = new Medida({nome: "Braço", valor: 30, unidade: "cm"});
-        const id = repo.add(m);
+        const id = repo.add(m); // Adiciono uma medida e guardo o id dela
 
         const ok = repo.removeById(id);
         assert.true(ok, "removeu com sucesso");

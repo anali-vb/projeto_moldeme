@@ -32,8 +32,8 @@
     /* Largura do container */
     --container: 1080px;
 }
-
-*,
+/* Coloquei esse reset global para todos os elementos, evitando que estourem quando recebem espaçamento ou bordas */
+*, 
 *::before,
 *::after { 
     box-sizing: border-box; 
@@ -51,7 +51,7 @@ body {
     color: var(--texto);
     background: var(--fundo);
     display: flex; 
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 /* Tipografia base */
@@ -63,13 +63,13 @@ h1, h2, p {
 img { 
     max-width: 100%; 
     height: auto; 
-    display: block; 
+    display: block;
 }
 
 /* Foco acessível global */
-:where(a, button, input, select, textarea):focus-visible {
-    outline: 3px solid var(--amarelo-acento);
-    outline-offset: 2px;
+:where(a, button, input, select, textarea):focus-visible { /* para agrupar vários seletores com foco, sem aumentar a especificidade. -> para mostrar o contorno de foco só quando ele é necessário */
+    outline: 3px solid var(--amarelo-acento); 
+    outline-offset: 2px; 
 }
 
 /* Layout*/
@@ -84,7 +84,7 @@ main.container {
 }
 
 .grid {
-    display: grid;
+    display: grid; 
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-4);
 }
@@ -108,7 +108,7 @@ header.container img {
 }
 
 header.container h1 {
-    font-size: clamp(1.75rem, 1.1rem + 1.5vw, 2.25rem);
+    font-size: clamp(1.75rem, 1.1rem + 1.5vw, 2.25rem); /* para escalonar tamanho de fonte conforme o viewport */
     font-weight: 600;
     color: var(--roxo-hover);
 }
@@ -147,7 +147,7 @@ header.container h1 {
 }
 
 /* Inputs/select com baixa especificidade */
-:where(input[type="text"], input[type="number"], select) {
+:where(input[type="text"], input[type="number"], select) { /* padronizando todos os campos de formulário */
     width: 100%;
     padding: 10px 12px;
     border: 1px solid var(--superficie);
@@ -157,25 +157,25 @@ header.container h1 {
     transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
 }
 
-:where(input[type="text"], input[type="number"], select):hover {
+:where(input[type="text"], input[type="number"], select):hover { /* feedback visual para o usuário saber que pode interagir */
     border-color: #d9d7de;
 }
 
-:where(input[type="text"], input[type="number"], select):focus {
+:where(input[type="text"], input[type="number"], select):focus { /* tab -> acessibilidade, porque mostra claramente qual campo está ativo */
     border-color: var(--roxo-principal);
     box-shadow: 0 0 0 3px var(--anel-acento);
 }
 
 /* Botões principais */
 #btn-adicionar, button[type="submit"], button.btn-primary {
-    appearance: none;
+    appearance: none; /* remove o estilo padrão do navegador */
     border: none;
     border-radius: var(--radius);
     background: var(--roxo-principal);
     color: #fff;
     padding: 12px 16px;
     font-weight: 600;
-    cursor: pointer;
+    cursor: pointer; /* maozinha */
     transition: background .15s ease, box-shadow .15s ease, transform .03s ease;
 }
 
@@ -187,7 +187,7 @@ header.container h1 {
     transform: translateY(1px);
 }
 
-#btn-adicionar:disabled, button[type="submit"]:disabled {
+#btn-adicionar:disabled, button[type="submit"]:disabled { /* Reduz a opacidade e troca o cursor para indicar que o botão está desativado */
     opacity: .6;
     cursor: not-allowed;
 }
@@ -202,8 +202,8 @@ header.container h1 {
 
 table {
     width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
+    border-collapse: collapse; /* bordas das células são exibidas -> bordas vizinhas (de células lado a lado) se juntem em uma só */
+    table-layout: fixed; /* para forçar uma largura previsível nas colunas */
 }
 
 thead th {
@@ -212,11 +212,11 @@ thead th {
     padding: 12px;
     background: var(--superficie);
     color: var(--texto);
-    position: sticky; 
-    top: 0;
-    z-index: 1;
-    word-break: normal;
-    overflow-wrap: normal; 
+    position: sticky; /* para que ele acompanhe a rolagem e melhore a experiência do usuário, sem precisar fixar na tela inteira */
+    top: 0; /* abela grude exatamente no topo do container quando rolar */
+    z-index: 1; /* evita que as células do corpo (tbody td) passem por cima dele quando você rolar */
+    word-break: normal; /* ó quebra em espaços ou hífens, não corta palavras no meio */
+    overflow-wrap: normal; /* Ajuda a manter os títulos das colunas organizados, sem cortar letras no meio */
 }
 
 tbody td {
@@ -226,13 +226,13 @@ tbody td {
     text-align: center;
 }
 
-tbody td:nth-child(1) {
+tbody td:nth-child(1) { /* controlar como o texto se comporta dentro da primeira coluna da tabela */
     white-space: normal;
     overflow-wrap: normal;  
     word-break: keep-all; 
 }
 
-tbody tr:nth-child(even) {
+tbody tr:nth-child(even) { /* tabela zebrada */
     background: #faf9fb;
 }
 
@@ -247,11 +247,11 @@ tbody tr:nth-child(even) {
     cursor: pointer;
     font-weight: 500;
     transition: background .15s ease, color .15s ease, box-shadow .15s ease;
-    justify-content: center;
+    justify-content: center; /* centraliza itens num container flex */
     min-width: 36px;
     height: 36px;
     line-height: 1;
-    white-space: nowrap;
+    white-space: nowrap; /* impede que o texto pule pra linha de baixo */
 }
 
 .btn-remover:hover {
@@ -262,8 +262,8 @@ tbody tr:nth-child(even) {
     box-shadow: 0 0 0 3px var(--amarelo-acento);
 }
 
-.btn-remover span { 
-    pointer-events: none; 
+.btn-remover span { /* o evento passa direto para o botão pai */
+    pointer-events: none; /* elemento ignora cliques do mouse */
 }
 
 /* Status tabela */
@@ -292,14 +292,14 @@ tbody tr:nth-child(even) {
 }
 
 /* Esconder visualmente (acessibilidade) */
-.sr-only{
-    position: absolute !important;  
+.sr-only{ /* conteúdo visível apenas para leitores de tela */
+    position: absolute !important; /* tira o elemento do fluxo da página */  
     width: 1px; 
     height: 1px;        
     padding: 0; 
     margin: -1px;       
-    overflow: hidden;               
-    clip: rect(0,0,0,0);           
+    overflow: hidden; /* esconde qualquer coisa que ultrapasse */               
+    clip: rect(0,0,0,0); /* recorta a área visível do elemento para nada */           
     white-space: nowrap;           
     border: 0;
 }
@@ -338,8 +338,8 @@ tbody tr:nth-child(even) {
     }
 
     .table-wrapper {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        overflow-x: auto; /* barra de rolagem */
+        -webkit-overflow-scrolling: touch; /* scroll seja mais suave e fluido */
     }
 
     thead th, tbody td { 
@@ -348,7 +348,7 @@ tbody tr:nth-child(even) {
 
     thead th {
         white-space: nowrap;
-        word-break: keep-all;
+        word-break: keep-all; /* quebrar a linha em espaços normais */
     }
 
     .full { 

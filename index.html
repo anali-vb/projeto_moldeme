@@ -47,14 +47,14 @@
         
         <section class="card">
             <h2>Medidas Cadastradas</h2>
-            <div class="table-wrapper">
-                <table aria-describedby="status-tabela">
+            <div class="table-wrapper"> <!--container para envolver a tabela -->
+                <table aria-describedby="status-tabela"> <!--leitor de tela -->
                     <thead>
-                        <tr>
+                        <tr> 
                             <th scope="col">Nome</th>
                             <th scope="col">Valor</th>
                             <th scope="col">
-                                <span class="full">Unidade</span>
+                                <span class="full">Unidade</span> <!-- aplicar estilo ou comportamento a um trecho específico de texto ou elemento -->
                                 <span class="short">UN.</span>    
                             </th>
                             <th scope="col">Ação</th>
@@ -62,7 +62,7 @@
                     </thead>
                     <tbody id="tabela-medidas"></tbody>
                 </table>
-                <p id="status-tabela" class="muted" aria-live="polite">
+                <p id="status-tabela" class="muted" aria-live="polite"> <!--Esse conteúdo pode mudar, então anuncie as mudanças para o usuário -> estilo utilitário para textos secundários-->
                     Nenhuma medida adicionada ainda.
                 </p>
 
@@ -76,11 +76,11 @@
         </p>
     </footer>
 
-    <script src="scripts/model.js" defer></script>
-    <script src="scripts/repository.js" defer></script>
+    <script src="scripts/model.js" defer></script> <!-- para carregar os scripts sem bloquear o HTML e garantir que só executem depois que o DOM está pronto, mantendo também a ordem entre eles -->
+    <script src="scripts/repository.js" defer></script> <!-- centralizar a lógica de dados e facilitar manutenção -->
     <script src="scripts/view.js" defer></script>
     <script src="scripts/controller.js" defer></script>
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/main.js" defer></script> <!-- ponto de entrada para inicializar o sistema -->
 
 </body>
 </html>
